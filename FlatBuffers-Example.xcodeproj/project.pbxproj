@@ -40,8 +40,8 @@
 		AB5FCD6821BE699D0055879E /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		AB5FCD6C21BEAC760055879E /* flatc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = flatc; sourceTree = "<group>"; };
 		AB5FCD6E21BEAC800055879E /* zc_player_profile_schema.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zc_player_profile_schema.fbs; sourceTree = "<group>"; };
-		AB5FCD6F21BEACF10055879E /* zc_player_profile_schema_generated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zc_player_profile_schema_generated.h; sourceTree = "<group>"; };
 		AB5FCD7121BEAD8E0055879E /* libflatbuffers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libflatbuffers.a; sourceTree = "<group>"; };
+		AB5FCD7521BEB6E40055879E /* zc_player_profile_schema_generated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zc_player_profile_schema_generated.h; sourceTree = "<group>"; };
 		ABF5A78921BE5F0900841BF0 /* FlatBuffers-Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FlatBuffers-Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5A78C21BE5F0900841BF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +71,7 @@
 		AB5FCD5921BE699D0055879E /* include */ = {
 			isa = PBXGroup;
 			children = (
+				AB5FCD7521BEB6E40055879E /* zc_player_profile_schema_generated.h */,
 				AB5FCD5A21BE699D0055879E /* flatbuffers */,
 			);
 			path = include;
@@ -100,7 +101,6 @@
 		AB5FCD6B21BEAC760055879E /* Bin */ = {
 			isa = PBXGroup;
 			children = (
-				AB5FCD6F21BEACF10055879E /* zc_player_profile_schema_generated.h */,
 				AB5FCD6E21BEAC800055879E /* zc_player_profile_schema.fbs */,
 				AB5FCD6C21BEAC760055879E /* flatc */,
 			);
@@ -113,13 +113,6 @@
 				AB5FCD7121BEAD8E0055879E /* libflatbuffers.a */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		AB5FCD7321BEADBB0055879E /* src */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		ABF5A78021BE5F0900841BF0 = {
@@ -141,7 +134,6 @@
 		ABF5A78B21BE5F0900841BF0 /* FlatBuffers-Example */ = {
 			isa = PBXGroup;
 			children = (
-				AB5FCD7321BEADBB0055879E /* src */,
 				AB5FCD5821BE699D0055879E /* flatbuffers */,
 				ABF5A78C21BE5F0900841BF0 /* main.cpp */,
 			);
@@ -326,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/FlatBuffers-Example/flatbuffers/include/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlatBuffers-Example/flatbuffers/Lib",
@@ -338,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/FlatBuffers-Example/flatbuffers/include/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlatBuffers-Example/flatbuffers/Lib",
