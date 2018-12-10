@@ -23,6 +23,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB5FCD5B21BE699D0055879E /* grpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grpc.h; sourceTree = "<group>"; };
+		AB5FCD5C21BE699D0055879E /* idl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idl.h; sourceTree = "<group>"; };
+		AB5FCD5D21BE699D0055879E /* reflection_generated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reflection_generated.h; sourceTree = "<group>"; };
+		AB5FCD5E21BE699D0055879E /* registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registry.h; sourceTree = "<group>"; };
+		AB5FCD5F21BE699D0055879E /* flatbuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flatbuffers.h; sourceTree = "<group>"; };
+		AB5FCD6021BE699D0055879E /* flatc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flatc.h; sourceTree = "<group>"; };
+		AB5FCD6121BE699D0055879E /* flexbuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flexbuffers.h; sourceTree = "<group>"; };
+		AB5FCD6221BE699D0055879E /* minireflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minireflect.h; sourceTree = "<group>"; };
+		AB5FCD6321BE699D0055879E /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		AB5FCD6421BE699D0055879E /* code_generators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code_generators.h; sourceTree = "<group>"; };
+		AB5FCD6521BE699D0055879E /* stl_emulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_emulation.h; sourceTree = "<group>"; };
+		AB5FCD6621BE699D0055879E /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		AB5FCD6721BE699D0055879E /* reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reflection.h; sourceTree = "<group>"; };
+		AB5FCD6821BE699D0055879E /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		ABF5A78921BE5F0900841BF0 /* FlatBuffers-Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FlatBuffers-Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5A78C21BE5F0900841BF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +52,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB5FCD5821BE699D0055879E /* flatbuffers */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FCD5921BE699D0055879E /* include */,
+			);
+			path = flatbuffers;
+			sourceTree = "<group>";
+		};
+		AB5FCD5921BE699D0055879E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FCD5A21BE699D0055879E /* flatbuffers */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		AB5FCD5A21BE699D0055879E /* flatbuffers */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FCD5B21BE699D0055879E /* grpc.h */,
+				AB5FCD5C21BE699D0055879E /* idl.h */,
+				AB5FCD5D21BE699D0055879E /* reflection_generated.h */,
+				AB5FCD5E21BE699D0055879E /* registry.h */,
+				AB5FCD5F21BE699D0055879E /* flatbuffers.h */,
+				AB5FCD6021BE699D0055879E /* flatc.h */,
+				AB5FCD6121BE699D0055879E /* flexbuffers.h */,
+				AB5FCD6221BE699D0055879E /* minireflect.h */,
+				AB5FCD6321BE699D0055879E /* util.h */,
+				AB5FCD6421BE699D0055879E /* code_generators.h */,
+				AB5FCD6521BE699D0055879E /* stl_emulation.h */,
+				AB5FCD6621BE699D0055879E /* hash.h */,
+				AB5FCD6721BE699D0055879E /* reflection.h */,
+				AB5FCD6821BE699D0055879E /* base.h */,
+			);
+			path = flatbuffers;
+			sourceTree = "<group>";
+		};
 		ABF5A78021BE5F0900841BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +108,7 @@
 		ABF5A78B21BE5F0900841BF0 /* FlatBuffers-Example */ = {
 			isa = PBXGroup;
 			children = (
+				AB5FCD5821BE699D0055879E /* flatbuffers */,
 				ABF5A78C21BE5F0900841BF0 /* main.cpp */,
 			);
 			path = "FlatBuffers-Example";
