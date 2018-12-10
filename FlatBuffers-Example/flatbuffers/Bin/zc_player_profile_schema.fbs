@@ -1,0 +1,36 @@
+
+namespace ZombieCatchers.PlayerProfile;
+
+table PlayerProfile
+{
+	id 			: string;	
+	name		: string;
+	playerLevel : int;
+	playerRank  : int;
+	plutonium   : int;
+	coin 		: int;
+
+	machine_part_1 : int;
+	machine_part_2 : int;
+	machine_part_3 : int;
+	
+	zombies:[Zombie];
+	
+	squeezers:[Squeezer];
+	
+}
+
+
+table Zombie
+{
+	zombieId : int;
+	amount   : int;
+}
+
+table Squeezer
+{
+	type 	 : int;
+	unlocked : bool = false;
+}
+
+root_type PlayerProfile;
