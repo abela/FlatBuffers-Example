@@ -39,8 +39,6 @@ auto CreatePlayer()
     zombies_vector.push_back(blue_zombie);
     
     
-    
-    
     // yellow squeezer
     auto yellow_zombie_squeezer = CreateSqueezer(0, true);
     
@@ -59,9 +57,9 @@ auto CreatePlayer()
     flatbuffers::Offset<flatbuffers::String> playerNameString = builder.CreateString("Giorgi Abelix Abelashvili");
     auto zombiesInventory = builder.CreateVector(zombies_vector);
     auto squeezersInventory = builder.CreateVector(squeezer_vector);
+    //
     // create player progile
     PlayerProfile::PlayerProfileBuilder playerProfileBuilder (builder);
-    
     playerProfileBuilder.add_id(playerIdString);
     playerProfileBuilder.add_name(playerNameString);
     playerProfileBuilder.add_plutonium(100);
@@ -80,10 +78,22 @@ auto CreatePlayer()
 int main(int argc, const char * argv[])
 {
     // create player
-    auto player = CreatePlayer();
+    auto playerToWrite = CreatePlayer();
+    //
+    // serialize the root of the object
+    builder.Finish(playerToWrite);
 
+    // we can send Builder directly over the network or save to Disk
     
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    // save / send code goes here
+    
+    // here we are just reading the Player profile again
+    auto playerToRead = PlayerProfile::GetPlayerProfile(builder.GetBufferPointer());
+    //
+    // print some player data here
+    std::cout<<"Player Level = "<<playerToRead->playerLevel()<<std::endl;
+    std::cout<<"Coins Count = "<<playerToRead->coin()<<std::endl;
+    std::cout<<"Plutonium Count = "<<playerToRead->plutonium()<<std::endl;
+    //
     return 0;
 }
