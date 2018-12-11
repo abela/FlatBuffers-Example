@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB5FCD7221BEAD8E0055879E /* libflatbuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5FCD7121BEAD8E0055879E /* libflatbuffers.a */; };
+		AB5FCD7D21BFC45A0055879E /* PlayerProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5FCD7C21BFC45A0055879E /* PlayerProgress.cpp */; };
 		ABF5A78D21BE5F0900841BF0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABF5A78C21BE5F0900841BF0 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		AB5FCD6E21BEAC800055879E /* zc_player_profile_schema.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zc_player_profile_schema.fbs; sourceTree = "<group>"; };
 		AB5FCD7121BEAD8E0055879E /* libflatbuffers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libflatbuffers.a; sourceTree = "<group>"; };
 		AB5FCD7521BEB6E40055879E /* zc_player_profile_schema_generated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zc_player_profile_schema_generated.h; sourceTree = "<group>"; };
+		AB5FCD7B21BFC45A0055879E /* PlayerProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProgress.h; sourceTree = "<group>"; };
+		AB5FCD7C21BFC45A0055879E /* PlayerProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerProgress.cpp; sourceTree = "<group>"; };
 		ABF5A78921BE5F0900841BF0 /* FlatBuffers-Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FlatBuffers-Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF5A78C21BE5F0900841BF0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +118,15 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		AB5FCD7A21BFC45A0055879E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FCD7B21BFC45A0055879E /* PlayerProgress.h */,
+				AB5FCD7C21BFC45A0055879E /* PlayerProgress.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		ABF5A78021BE5F0900841BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 		ABF5A78B21BE5F0900841BF0 /* FlatBuffers-Example */ = {
 			isa = PBXGroup;
 			children = (
+				AB5FCD7A21BFC45A0055879E /* src */,
 				AB5FCD5821BE699D0055879E /* flatbuffers */,
 				ABF5A78C21BE5F0900841BF0 /* main.cpp */,
 			);
@@ -197,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF5A78D21BE5F0900841BF0 /* main.cpp in Sources */,
+				AB5FCD7D21BFC45A0055879E /* PlayerProgress.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
