@@ -17,7 +17,6 @@ table PlayerProfile
 	zombies:[Zombie];
 	
 	squeezers:[Squeezer];
-	
 }
 
 

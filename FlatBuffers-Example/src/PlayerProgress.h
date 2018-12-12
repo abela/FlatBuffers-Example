@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "../flatbuffers/include/zc_player_profile_schema_generated.h"
+#include "../flatbuffers/util.h"
 
 using namespace ZombieCatchers;
 
@@ -29,6 +30,8 @@ public:
     
 private:
 
+    char *profileDataBuffer;
+    
     flatbuffers::Offset<PlayerProfile::PlayerProfile> currentPlayerProfile;
     
     // load zombie object
@@ -37,6 +40,10 @@ private:
     // load squeezer object
     flatbuffers::Offset<PlayerProfile::Squeezer> LoadSqueezer(int squeezerId, bool unlocked);
 
+    bool SaveProgress(char* buffer);
+    
+    bool LoadProgress(std::string &buffer);
+    
 };
 
 #endif /* PlayerProgress_h */
